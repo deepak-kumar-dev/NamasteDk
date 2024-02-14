@@ -2,6 +2,27 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import logo from "./assets/logo.jpg";
 
+/**
+ * Header
+ *    - Logo
+ *    - Nav Items
+ *
+ * Body
+ *    - Search
+ *    - Res Container
+ *        - Res Card
+ *              -Img
+ *              -Name of res, start rating, cuisine, delivery time
+ *
+ * Footer
+ *  - Copyright
+ *  - Links
+ *  - Address
+ *  - Contact
+ *
+ *
+ */
+
 const Header = () => {
   return (
     <header className="header">
@@ -20,10 +41,30 @@ const Header = () => {
   );
 };
 
+const RestaurantCard = () => {
+  return (
+    <div className="res-card">
+      <h3>Damru Foods</h3>
+    </div>
+  );
+};
+
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search">Search</div>
+      <div className="res-container">
+        <RestaurantCard></RestaurantCard>
+      </div>
+    </div>
+  );
+};
+
 export default App = () => {
   return (
     <div className="main">
       <Header></Header>
+      <Body></Body>
     </div>
   );
 };
